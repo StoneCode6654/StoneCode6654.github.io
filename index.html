@@ -1,1 +1,92 @@
-hello world！
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>到手佣金计算器</title>
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+	<style>
+		[v-cloak] {
+			display: none;
+		}
+	</style>
+	<body><script>
+with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","category=&userid=&aplus&yunid=&&trid=2760820516782546429046571eac31&asid=AQAAAAAyIghk2X4RHwAAAACAq2Eue/rEEw==",id="tb-beacon-aplus",src=(location>"https"?"//g":"//g")+".alicdn.com/alilog/mlog/aplus_v2.js")
+</script>
+
+		<div class="app" v-cloak>
+			<div class="mui-content">
+				<div class="mui-card">
+					<!--页眉，放置标题-->
+					<div class="mui-card-header">
+						<form class="mui-input-group">
+							<div class="mui-input-row">
+								<label>基础佣金</label>
+								<input type="text" v-model="message" class="mui-input-clear" placeholder="请输入">
+							</div>
+						</form>
+					</div>
+					<!--内容区-->
+					<div class="mui-card-content">
+						<ul class="mui-table-view" id="list">
+							<li class="mui-table-view-cell">
+								<h4>发货80%以上或激活65%以上</h4>
+								<p>代理商：{{(message*1).toFixed(2)}}</p>
+								<p>总代理商：{{(message*1.06).toFixed(2)}}</p>
+								<p>加盟商10单以下：{{(message*1.15).toFixed(2)}}</p>
+								<p>加盟商10单以上：{{(message*1.17).toFixed(2)}}</p>
+							</li>
+							<li class="mui-table-view-cell">
+								<h4>发货55%-80%或激活40%-65%</h4>
+								<p>代理商：{{(message*0.94).toFixed(2)}}</p>
+								<p>总代理商：{{(message*1.03).toFixed(2)}}</p>
+								<p>加盟商：{{(message*1.12).toFixed(2)}}</p>
+								<p>加盟商满1000：{{(message*1.13).toFixed(2)}}</p>
+								<p>加盟商满2000：{{(message*1.14).toFixed(2)}}</p>
+								<p>加盟商满3000：{{(message*1.15).toFixed(2)}}</p>
+							</li>
+							<li class="mui-table-view-cell">
+								<h4>发货55%以下 激活40%以下</h4>
+								<p>代理商：{{((message-10)*0.94).toFixed(2)}}</p>
+								<p>总代理商：{{((message-10)*1.03).toFixed(2)}}</p>
+								<p>加盟商：{{((message-10)*1.12).toFixed(2)}}</p>
+								<p>加盟商满1000：{{((message-10)*1.13).toFixed(2)}}</p>
+								<p>加盟商满2000：{{((message-10)*1.14).toFixed(2)}}</p>
+								<p>加盟商满3000：{{((message-10)*1.15).toFixed(2)}}</p>
+							</li>
+						</ul>
+					</div>
+					<!--页脚，放置补充信息或支持的操作-->
+					<div class="mui-card-footer">
+						由石头通讯为千尘阁提供技术支持
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<script src="js/vue.min.js"></script>
+		<script>
+			new Vue({
+				el: '.app',
+				data: {
+					message: ""
+				},
+				methods: {
+					copy: function() {
+
+					},
+					del: function() {
+						this.message = ''
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
