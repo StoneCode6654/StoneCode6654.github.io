@@ -36,7 +36,7 @@
 								<p>加盟商10单以上：{{(message*1.17).toFixed(2)}}</p>
 							</li>
 							<li class="mui-table-view-cell">
-								<h4>发货55%-80%或激活40%-65%</h4>
+								<h4>发货55-80%或激活40-65%</h4>
 								<p>代理商：{{(message*0.94).toFixed(2)}}</p>
 								<p>总代理商：{{(message*1.03).toFixed(2)}}</p>
 								<p>加盟商：{{(message*1.12).toFixed(2)}}</p>
@@ -73,14 +73,6 @@
 				el: '.app',
 				data: {
 					message: ""
-				},
-				methods: {
-					copy: function() {
-
-					},
-					del: function() {
-						this.message = ''
-					}
 				}
 			})
 		</script>
